@@ -1,0 +1,164 @@
+.wrap-scrolldownhoney {
+	left: 50%;
+	position: absolute;
+	text-align: center;
+	bottom: 30px;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	z-index: 3;
+	opacity: 0.65;
+	.scrolldownhoney {
+		border: 2px solid #fff;
+		border-radius: 30px;
+		height: 46px;
+		margin: 0 auto 8px;
+		text-align: center;
+		width: 30px;
+		.scrolldownhoney-c1,
+		.scrolldownhoney-c2 {
+			animation-duration: 1.5s;
+			animation-name: scrolldownhoney;
+			animation-iteration-count: infinite;
+			fill: #fff;
+		}
+
+		line {
+			stroke: #fff;
+			stroke-width:2;
+			stroke-linecap: round;
+			animation-duration: 2s;
+			animation-name: scrolldownhoney;
+			animation-iteration-count: infinite;
+		}
+	}
+  
+	.scrolldownhoney-c2 {
+		animation-delay: .75s;
+	}
+
+	@media only screen and (max-width : $lw) {
+		bottom: 5px;
+	}
+}
+
+@keyframes scrolldownhoney {
+	0%{
+		opacity: 0;
+		transform:translate(0, -8px);
+	}
+	50% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(0, 8px);
+	}
+}
+
+
+@keyframes from-bottom {
+	0%{
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.master-slider {
+	.ms-slide {
+		.ms-slide-bgcont {
+			display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		img {
+    			margin: 0 !important;
+    		}
+		}
+	}
+	.ms-nav-next, .ms-nav-prev {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 30px;
+		width: 20px;
+		cursor: pointer;
+		font-size: 22px;
+	}
+
+	.ms-nav-next {
+		right: -30px;
+
+		&:after {
+			content: "\f054";
+			position: absolute;
+			top: 4px;
+    		right: -1px;
+			font-family: FontAwesome;
+			
+		}
+	}
+	.ms-nav-prev {
+		left: -30px;
+		&:after {
+			content: "\f053";
+			position: absolute;
+			top: 4px;
+    		left: -1px;
+			font-family: FontAwesome;
+
+		}
+	}
+	@media only screen and (max-width : $tw) {
+		.ms-nav-next {
+			right: -20px;
+		}
+		.ms-nav-prev {
+			left: -20px;
+		}
+	}
+
+	@media only screen and (max-width : $mw) {
+		.ms-nav-next, .ms-nav-prev {
+			background: #fff;
+		}
+		.ms-nav-next {
+			right: 0px;
+		}
+		.ms-nav-prev {
+			left: 0px;
+		}
+	}
+}
+
+
+.section-title {
+	border-bottom: 1px solid #000;
+	
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	.main {
+		padding: 10px 0;
+		@include f-sb;
+		font-size: 40px;
+		line-height: 43px;
+		color: #000;
+	}
+
+	@media only screen and (max-width : $tw) {
+		.main {
+			font-size: 30px;
+			line-height: 35px;
+		}
+	}
+	@media only screen and (max-width : $mw) {
+		.main {
+			font-size: 28px;
+			line-height: 32px;
+		}
+	}
+}

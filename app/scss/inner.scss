@@ -1,0 +1,64 @@
+/* ---------------------- Section top-inner ---------------------- */
+section.top-inner {
+	background-color: #F5F5F5;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: relative;
+	.section-inner {
+		padding: 0 10px;
+	}
+	.title {
+		@include f-r;
+		font-size: 60px;
+		line-height: 60px;
+		color: #000000;
+		margin: 0;
+		text-align: right;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.breadcrumbs {
+		text-align: right;
+		margin-top: 30px;
+		display: inline-block;
+		vertical-align: middle;
+		float: left;
+	}
+	.line {
+		@include f-sb;
+		font-size: 18px;
+		color: #000;
+		a {
+			@include f-r;
+			font-size: 18px;
+			color: #000;
+			margin: 0 5px;
+		}
+		.breadcrumb_last {
+			@include f-sb;
+			font-size: 18px;
+			color: #000;
+			margin: 0 5px;
+		}
+	}
+
+	@media only screen and (max-width : $lw) {
+		.title {
+			font-size: 40px;
+		}
+
+	}
+	@media only screen and (max-width : $mw) {
+
+		.title {
+			font-size: 40px;
+			line-height: 30px;
+		}
+		.breadcrumbs {
+			float: none;
+			display: block;
+			margin-top: 15px;
+		}
+	}
+}
+/* --------------------- /Section top-inner ---------------------- */
